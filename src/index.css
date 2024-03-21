@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Nunito:wght@300;400;500;600;700;800;900&family=Poppins:ital,wght@0,400;0,600;1,800&family=Silkscreen&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+}
