@@ -1,18 +1,11 @@
-import Ticket, { TicketType } from "./Ticket";
-import React from "react";
-import { fetchData } from "../utils/fetchData";
+import Ticket from "./Ticket";
+import { TicketType } from "../../RTK/ticketSlice";
+import { useAppSelector } from "../utils/hooks";
 
 export default function ListTickets() {
-  const [tickets, setTickets] = React.useState<TicketType[]>([]);
-  React.useEffect(() => {
-    const fetchTickets = async () => {
-      const data = await fetchData();
-      setTickets(data);
-    };
-    fetchTickets();
-  }, []);
+  const tickets = useAppSelector((state) => state.tickets.tickets);
   return (
-    <div>
+    <div className="flex flex-col items-center">
       {tickets.map((ticket: TicketType) => (
         <Ticket key={ticket.id} {...ticket} />
       ))}

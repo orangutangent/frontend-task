@@ -1,24 +1,10 @@
-export type TicketType = {
-  id: number;
-  cost: number;
-  departureTime: string;
-  arrivalTime: string;
-  flightDuration: string;
-  layovers: string[];
-  departureLocation: string;
-  arrivalLocation: string;
-  airline: string;
-  departureDate: string;
-  arrivalDate: string;
-  flightClass: string;
-  luggageAvailability: boolean;
-};
+import { TicketType } from "../../RTK/ticketSlice";
 
 export default function Tickets(
   ticket: TicketType
 ): React.ReactElement<TicketType> {
   return (
-    <div className="w-1/2 border-2 border-gray-300 mx-auto my-10 p-6 rounded-xl">
+    <div className=" border-2 border-gray-300 my-10 p-6 rounded-xl">
       <div className="flex justify-between items-center w-full px-12 my-2">
         <div className="text-5xl text-blue-600 font-semibold">
           {ticket.cost}$
@@ -36,7 +22,7 @@ export default function Tickets(
         </div>
         <div className="inline-block text-center">
           <p className="text-xl text-gray-500">On the way</p>
-          <p className="text-3xl">{ticket.flightDuration}</p>
+          <p className="text-3xl">{ticket.flightDuration} hours</p>
         </div>
         <div className="inline-block text-center">
           <p className="text-xl text-gray-500">

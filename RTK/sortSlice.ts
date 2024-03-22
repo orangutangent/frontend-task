@@ -1,20 +1,19 @@
 import { createSlice } from "@reduxjs/toolkit";
-import type { PayloadAction } from "@reduxjs/toolkit";
 
 export enum SortBy {
   CHEAP = 0,
   FAST = 1,
 }
 
-export interface CounterState {
+export interface SortState {
   sortBy: SortBy;
 }
 
-const initialState: CounterState = {
+const initialState: SortState = {
   sortBy: SortBy.CHEAP,
 };
 
-export const counterSlice = createSlice({
+export const sortSlice = createSlice({
   name: "counter",
   initialState,
   reducers: {
@@ -25,6 +24,6 @@ export const counterSlice = createSlice({
 });
 
 // Action creators are generated for each case reducer function
-export const { toggle } = counterSlice.actions;
+export const { toggle } = sortSlice.actions;
 
-export default counterSlice.reducer;
+export default sortSlice.reducer;
