@@ -8,6 +8,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/frontend-task" element={<Home />} />
         <Route path="/ticket/:id" element={<TicketPage />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
