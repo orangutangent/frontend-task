@@ -20,7 +20,7 @@ const Home: React.FC = () => {
   }, []);
   React.useEffect(() => {
     dispatch(fetchTickets({ sort, search, filter }));
-  }, [sort, filter, search]);
+  }, [sort, filter, search, dispatch]);
   return (
     <div>
       <SearchBar />
