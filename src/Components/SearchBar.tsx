@@ -8,6 +8,13 @@ const SearchBar = () => {
   const [searchBar, setSearchBar] = React.useState("");
   const searchBarRef = React.useRef<HTMLInputElement>(null);
   const clicked = React.useRef(false);
+  const handleSearch = () => {
+    if (searchBarRef.current) {
+      dispatch(setSearch(searchBarRef.current.value));
+    }
+    setSearchBar("");
+    clicked.current = true;
+  };
   return (
     <div>
       <div className="flex justify-center mt-10 w-1/3 mx-auto rounded-xl border-blue-700">
@@ -15,21 +22,16 @@ const SearchBar = () => {
           ref={searchBarRef}
           type="text"
           placeholder="Search..."
-          className="w-full outline-none p-4 border-2 border-blue-700 rounded-l-lg"
+          className="w-full outline-none text-xl p-4 border-2 border-blue-700 rounded-l-lg"
           value={searchBar}
           onChange={(e) => {
             setSearchBar(e.target.value);
           }}
+          onKeyDown={(e) => e.key === "Enter" && handleSearch()}
         />
         <button
-          className="bg-blue-700 text-white p-4 rounded-r-lg"
-          onClick={() => {
-            if (searchBarRef.current) {
-              dispatch(setSearch(searchBarRef.current.value));
-            }
-            setSearchBar("");
-            clicked.current = true;
-          }}
+          className="bg-blue-700 text-white p-4 rounded-r-lg active:bg-blue-800 duration-300 ease-in-out"
+          onClick={() => handleSearch()}
         >
           ПОИСК
         </button>

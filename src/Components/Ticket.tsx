@@ -1,10 +1,15 @@
 import { TicketType } from "../../RTK/ticketSlice";
+import { useNavigate } from "react-router-dom";
 
 export default function Tickets(
   ticket: TicketType
 ): React.ReactElement<TicketType> {
+  const navigate = useNavigate();
   return (
-    <div className=" border-2 border-gray-300 my-10 p-6 rounded-xl">
+    <div
+      className=" border-2 border-gray-300 my-10 p-6 rounded-xl hover:scale-105 duration-300 ease-in-out cursor-pointer"
+      onClick={() => navigate(`/ticket/${ticket.id}`)}
+    >
       <div className="flex justify-between items-center w-full px-12 my-2">
         <div className="text-5xl text-blue-600 font-semibold">
           {ticket.cost}$
