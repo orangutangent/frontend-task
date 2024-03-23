@@ -40,7 +40,7 @@ const TicketPage = () => {
           <div className="flex items-center justify-between">
             <div className="flex items-center">
               <img
-                src={"/img/S7.jpg"}
+                src={"https://www.aex.ru/images/media/900/36494.jpg"}
                 alt={ticket.airline}
                 className="w-24 h-24 rounded-full border-2 border-blue-700"
               />

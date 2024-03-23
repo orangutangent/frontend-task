@@ -14,7 +14,11 @@ export default function Tickets(
         <div className="text-5xl text-blue-600 font-semibold">
           {ticket.cost}$
         </div>
-        <img src="/img/S7.jpg" alt="S7 logo" className="w-1/4 " />
+        <img
+          src="https://www.aex.ru/images/media/900/36494.jpg"
+          alt="S7 logo"
+          className="w-1/4 "
+        />
       </div>
       <div className="flex justify-around my-4">
         <div className="inline-block text-center">
