@@ -14,7 +14,7 @@ const FilterItem = (props: PropsType) => {
   const dispatch = useAppDispatch();
   const filter = useAppSelector((state: RootState) => state.filter.filter);
   return (
-    <div className="flex items-center ms-12 text-2xl my-4">
+    <div className="flex items-center text-2xl my-4">
       <Checkbox
         color="blue"
         onPointerEnterCapture={undefined}

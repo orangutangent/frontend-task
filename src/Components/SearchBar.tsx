@@ -12,12 +12,16 @@ const SearchBar = () => {
     if (searchBarRef.current) {
       dispatch(setSearch(searchBarRef.current.value));
     }
-    setSearchBar("");
-    clicked.current = true;
+    if (searchBar) {
+      setSearchBar("");
+      clicked.current = true;
+    } else {
+      clicked.current = false;
+    }
   };
   return (
     <div>
-      <div className="flex justify-center mt-10 w-1/3 mx-auto rounded-xl border-blue-700">
+      <div className="flex justify-center mt-10 xs:w-5/6 xs:mx-auto sm:w-1/2 w-1/3 mx-auto rounded-xl border-blue-700">
         <input
           ref={searchBarRef}
           type="text"

@@ -28,7 +28,7 @@ const FilterPanel = () => {
   });
 
   return (
-    <div className="w-full border-2 border-gray-300 mx-auto my-10 p-6 rounded-xl">
+    <div className="w-full border-2 border-gray-300  my-10 p-6 rounded-xl">
       <p className="text-xl font-semibold text-center text-gray-700 my-4">
         КОЛИЧЕСТВО ПЕРЕСАДОК
       </p>

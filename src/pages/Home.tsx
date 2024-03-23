@@ -24,11 +24,11 @@ const Home: React.FC = () => {
   return (
     <div>
       <SearchBar />
-      <div className="flex ms-20 mt-4">
-        <div className="w-1/4 mx-10">
+      <div className="flex xs:flex-col sm:ms-0 ms-20 xs:mx-auto mt-4">
+        <div className="w-1/4 xs:w-5/6 mx-10 xs:mx-auto">
           <FilterPanel />
         </div>
-        <div className=" w-1/2">
+        <div className=" w-1/2 xs:w-5/6 xs:mx-auto">
           <Sort />
           <ListTickets />
         </div>

@@ -6,17 +6,20 @@ export default withMT({
   theme: {
     extend: {},
     screens: {
-      xs: { min: "320px", max: "768px" },
-      sm: { min: "768px", max: "1024px" },
+      xxs: { max: "320px" },
+      // => @media (max-width: 319px) { ... }
+      xs: { max: "768px" },
+
+      sm: { max: "1024px" },
       // => @media (min-width: 640px and max-width: 767px) { ... }
 
-      md: { min: "768px", max: "1023px" },
+      md: { max: "1366px" },
       // => @media (min-width: 768px and max-width: 1023px) { ... }
 
-      lg: { min: "1024px", max: "1366px" },
+      lg: { max: "1920px" },
       // => @media (min-width: 1024px and max-width: 1279px) { ... }
 
-      xl: { min: "1366px", max: "1920px" },
+      xl: { min: "1920px" },
       // => @media (min-width: 1280px and max-width: 1535px) { ... }
 
       "2xl": { min: "1536px" },
