@@ -31,25 +31,25 @@ const ModalBuyTicket: React.FC<ModalBuyTicketProps> = ({ handleModal }) => {
           {!filled ? (
             <form action="" className="flex flex-col my-4 px-4">
               <input
-                className="outline-none mb-4"
+                className="outline-none mb-4 border-b-2 border-blue-700 px-2"
                 type="text"
                 placeholder="Имя"
                 required
               />
               <input
-                className="outline-none mb-4"
+                className="outline-none mb-4 border-b-2 border-blue-700 px-2"
                 type="text"
                 placeholder="Фамилия"
                 required
               />
               <input
-                className="outline-none mb-4"
+                className="outline-none mb-4 border-b-2 border-blue-700 px-2"
                 type="text"
                 placeholder="Email"
                 required
               />
               <input
-                className="outline-none mb-4"
+                className="outline-none mb-4 border-b-2 border-blue-700 px-2"
                 type="text"
                 placeholder="телефон"
                 required

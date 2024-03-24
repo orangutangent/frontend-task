@@ -7,7 +7,7 @@ import { RootState } from "../../RTK/store";
 type PropsType = {
   name: string;
   title: filters;
-  ref: React.RefObject<HTMLInputElement>;
+  filterRef: React.RefObject<HTMLInputElement>;
 };
 
 const FilterItem = (props: PropsType) => {
@@ -20,7 +20,7 @@ const FilterItem = (props: PropsType) => {
         onPointerEnterCapture={undefined}
         onPointerLeaveCapture={undefined}
         crossOrigin={undefined}
-        ref={props.ref}
+        ref={props.filterRef}
         checked={filter.includes(props.title)}
         onChange={() =>
           props.title === filters.ALL

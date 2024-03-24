@@ -5,6 +5,7 @@ import ListTickets from "../Components/ListTickets";
 import FilterPanel from "../Components/FilterPanel";
 import SearchBar from "../Components/SearchBar";
 import { fetchTickets } from "../../RTK/ticketSlice";
+import { setSearch } from "../../RTK/searchSlice";
 
 const Home: React.FC = () => {
   const dispatch = useAppDispatch();
@@ -14,6 +15,7 @@ const Home: React.FC = () => {
   const isMounted = React.useRef(false);
   React.useEffect(() => {
     if (!isMounted.current) {
+      dispatch(setSearch(""));
       dispatch(fetchTickets({ sort, search, filter }));
       isMounted.current = true;
     }
